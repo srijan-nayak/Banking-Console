@@ -1,6 +1,6 @@
-.DS_Store
 a.out
-.ccls-cache
-a.out.dSYM
+/.ccls-cache
+/a.out.dSYM
 Account.hpp.gch
 sha256.hpp.gch
+.DS_Store
