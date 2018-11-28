@@ -14,8 +14,13 @@
 #include <fstream>
 #include <iostream>
 #include <thread>
+
+#ifdef WIN32
+#include <windows.h>
+#else
 #include <termios.h>
 #include <unistd.h>
+#endif
 
 using namespace std::this_thread;
 using namespace std::chrono;

@@ -19,7 +19,7 @@ void splashScreen() {
     std::cout << '\n';
     std::cout << '\n';
     std::cout << "                       Banking Console®" << '\n';
-    std::cout << "                             v1.0" << '\n';
+    std::cout << "                         ver. 1.0.1" << '\n';
     std::cout << '\n';
     std::cout << "                   Developers:- Srijan Nayak" << '\n';
     std::cout << "                                Shyle Shaju" << '\n';
@@ -329,8 +329,6 @@ int main() {
             std::cout << "Invalid choice!" << '\n';
             sleep;
         }
-        std::cin.clear();
-        std::cin.ignore(INT_MAX, '\n');
         foundFlag = false;  // Resets the state of all boolean check flags to
         foundFlag1 = false; // false.
     }
