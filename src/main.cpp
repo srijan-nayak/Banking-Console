@@ -19,7 +19,7 @@ void splashScreen() {
     std::cout << '\n';
     std::cout << '\n';
     std::cout << "                       Banking Console®" << '\n';
-    std::cout << "                         ver. 1.0.2" << '\n';
+    std::cout << "                         ver. 1.0.1" << '\n';
     std::cout << '\n';
     std::cout << "                   Developers:- Srijan Nayak" << '\n';
     std::cout << "                                Shyle Shaju" << '\n';
