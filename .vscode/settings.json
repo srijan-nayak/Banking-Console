@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "istream": "cpp",
+        "iosfwd": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "cstddef": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "fstream": "cpp",
+        "string": "cpp",
+        "ostream": "cpp"
+    },
+    "cSpell.words": [
+        "ROTL",
+        "ROTR",
+        "SHFR",
+        "ddmmyyyy",
+        "epfl"
+    ]
+}
