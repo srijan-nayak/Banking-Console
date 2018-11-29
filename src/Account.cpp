@@ -100,7 +100,7 @@ void Account::generateHash() {
     setStdinEcho(false);
     std::cin.getline(pass, 17);
     setStdinEcho(true);
-    std::cout << std::endl;
+    std::cout << '\n';
     passwordHash = sha256(pass);
     splitString(passwordHash, hashPart);
 }
@@ -166,7 +166,7 @@ bool Account::compareHash() {
     setStdinEcho(false);
     std::cin.getline(pass, 17);
     setStdinEcho(true);
-    std::cout << std::endl;
+    std::cout << '\n';
     hash = sha256(pass);
     confirmation = hash == passwordHash;
     return confirmation;
@@ -230,7 +230,7 @@ getPassword:
     generateHash();
     std::cout << "Confirm password: ";
     if (!compareHash()) {
-        std::cout << "Passwords don't match!" << std::endl;
+        std::cout << "Passwords don't match!" << '\n';
         std::cout << "Please re-enter password: ";
         goto getPassword;
     }
@@ -252,7 +252,7 @@ getAmount:
     }
 
     clearScreen;
-    std::cout << "Account created successfully" << std::endl << std::endl;
+    std::cout << "Account created successfully" << '\n' << '\n';
     std::cin.ignore();
     displayAccountDetails();
 }
@@ -334,18 +334,18 @@ bool Account::notValidEmail() const {
 void Account::displayAccountDetails() {
     std::string address;
     combineString(address, addressPart);
-    std::cout << "         Account Details" << std::endl;
-    std::cout << "         ———————————————" << std::endl;
-    std::cout << " Account number: " << accountNumber << std::endl;
-    std::cout << "           Name: " << name << std::endl;
-    std::cout << "  Date of birth: " << dateOfBirth << std::endl;
-    std::cout << "   Phone number: " << phoneNumber << std::endl;
-    std::cout << "  Email address: " << email << std::endl;
-    std::cout << "        Address: " << address << std::endl;
-    std::cout << "   Account type: " << accountType << std::endl;
-    std::cout << "Current balance: Rs. " << balance << std::endl;
-    std::cout << std::endl;
-    std::cout << "Press ENTER after noting down the details." << std::endl;
+    std::cout << "         Account Details" << '\n';
+    std::cout << "         ———————————————" << '\n';
+    std::cout << " Account number: " << accountNumber << '\n';
+    std::cout << "           Name: " << name << '\n';
+    std::cout << "  Date of birth: " << dateOfBirth << '\n';
+    std::cout << "   Phone number: " << phoneNumber << '\n';
+    std::cout << "  Email address: " << email << '\n';
+    std::cout << "        Address: " << address << '\n';
+    std::cout << "   Account type: " << accountType << '\n';
+    std::cout << "Current balance: Rs. " << balance << '\n';
+    std::cout << '\n';
+    std::cout << "Press ENTER after noting down the details." << '\n';
     std::cin.get();
 }
 
@@ -367,13 +367,13 @@ getAmount:
 getPassword:
     bool confirmation = compareHash();
     if (!confirmation) {
-        std::cout << "Incorrect password!" << std::endl;
+        std::cout << "Incorrect password!" << '\n';
         std::cout << "Please re-enter password: ";
         goto getPassword;
     }
-    std::cout << "Rs. " << amount << " deposited successfully." << std::endl;
+    std::cout << "Rs. " << amount << " deposited successfully." << '\n';
     balance += amount;
-    std::cout << "Current balance: " << balance << std::endl;
+    std::cout << "Current balance: " << balance << '\n';
     sleep;
 }
 
@@ -392,11 +392,11 @@ getAmount:
     if (accountType == "Savings" && (balance - amount) <= 1000) {
         std::cout << "Savings account must have at least a minimum balance of "
                      "Rs. 1000!"
-                  << std::endl;
+                  << '\n';
         std::cout << "Please re-enter amount to be withdrawn: ";
         goto getAmount;
     } else if (amount > balance) {
-        std::cout << "Insufficient credits!" << std::endl;
+        std::cout << "Insufficient credits!" << '\n';
         std::cout << "Please re-enter amount to be withdrawn: ";
         goto getAmount;
     } else if (amount < 0) {
@@ -407,13 +407,13 @@ getAmount:
 getPassword:
     bool confirmation = compareHash();
     if (!confirmation) {
-        std::cout << "Incorrect password!" << std::endl;
+        std::cout << "Incorrect password!" << '\n';
         std::cout << "Please re-enter password: ";
         goto getPassword;
     }
-    std::cout << "Rs. " << amount << " withdrawn successfully." << std::endl;
+    std::cout << "Rs. " << amount << " withdrawn successfully." << '\n';
     balance -= amount;
-    std::cout << "Current balance: " << balance << std::endl;
+    std::cout << "Current balance: " << balance << '\n';
     sleep;
 }
 
@@ -424,7 +424,7 @@ getPassword:
 void Account::withdrawAmount(double lastBalance) {
     balance -= lastBalance;
     std::cout << "Remaining balance Rs. " << lastBalance
-              << " withdrawn successfully." << std::endl;
+              << " withdrawn successfully." << '\n';
     sleep;
 }
 
@@ -438,7 +438,7 @@ getPassword:
     generateHash();
     std::cout << "Confirm password: ";
     if (!compareHash()) {
-        std::cout << "Passwords don't match!" << std::endl;
+        std::cout << "Passwords don't match!" << '\n';
         std::cout << "Please re-enter password: ";
         goto getPassword;
     }

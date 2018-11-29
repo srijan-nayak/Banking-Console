@@ -16,13 +16,13 @@ std::string masterKeyHash = // Hash of master key for exiting the console.
  * the console is launched.
  */
 void splashScreen() {
-    std::cout << std::endl;
-    std::cout << std::endl;
-    std::cout << "                       Banking Console®" << std::endl;
-    std::cout << "                         ver. 1.0.2" << std::endl;
-    std::cout << std::endl;
-    std::cout << "                   Developers:- Srijan Nayak" << std::endl;
-    std::cout << "                                Shyle Shaju" << std::endl;
+    std::cout << '\n';
+    std::cout << '\n';
+    std::cout << "                       Banking Console®" << '\n';
+    std::cout << "                         ver. 1.0.2" << '\n';
+    std::cout << '\n';
+    std::cout << "                   Developers:- Srijan Nayak" << '\n';
+    std::cout << "                                Shyle Shaju" << '\n';
     sleep;
     std::cout.flush();
 }
@@ -33,13 +33,13 @@ void splashScreen() {
  * number.
  */
 void menuDisplay() {
-    std::cout << std::endl;
+    std::cout << '\n';
     std::cout << "  1. Open Account     5. Display All Account Information"
-              << std::endl;
-    std::cout << "  2. Deposit Amount   6. Transfer Amount" << std::endl;
-    std::cout << "  3. Withdraw Amount  7. Delete Account" << std::endl;
-    std::cout << "  4. Forgot Password" << std::endl;
-    std::cout << std::endl;
+              << '\n';
+    std::cout << "  2. Deposit Amount   6. Transfer Amount" << '\n';
+    std::cout << "  3. Withdraw Amount  7. Delete Account" << '\n';
+    std::cout << "  4. Forgot Password" << '\n';
+    std::cout << '\n';
     std::cout << "Enter preferred option number: ";
     std::cout.flush();
 }
@@ -81,12 +81,12 @@ int main() {
             std::cin.ignore();
             std::cin.getline(temp, 25);
             setStdinEcho(true);
-            std::cout << std::endl;
+            std::cout << '\n';
             if (sha256(temp) == masterKeyHash) {
                 clearScreen;
                 return 0;
             } else {
-                std::cout << "Incorrect password!" << std::endl;
+                std::cout << "Incorrect password!" << '\n';
             }
             break;
 
@@ -116,7 +116,7 @@ int main() {
                 }
             }
             if (!foundFlag) {
-                std::cout << "No account with that account number!" << std::endl;
+                std::cout << "No account with that account number!" << '\n';
                 sleep;
             }
             file.close();
@@ -140,7 +140,7 @@ int main() {
                 }
             }
             if (!foundFlag) {
-                std::cout << "No account with that account number!" << std::endl;
+                std::cout << "No account with that account number!" << '\n';
                 sleep;
             }
             file.close();
@@ -176,14 +176,14 @@ int main() {
                         }
                     }
                     if (!foundFlag1) {
-                        std::cout << "Incorrect detail entered!" << std::endl;
+                        std::cout << "Incorrect detail entered!" << '\n';
                         sleep;
                     }
                     break;
                 }
             }
             if (!foundFlag) {
-                std::cout << "No account with that account number!" << std::endl;
+                std::cout << "No account with that account number!" << '\n';
                 sleep;
             }
             file.close();
@@ -203,14 +203,14 @@ int main() {
                         a.displayAccountDetails();
                         break;
                     } else {
-                        std::cout << "Incorrect password!" << std::endl;
+                        std::cout << "Incorrect password!" << '\n';
                         sleep;
                         break;
                     }
                 }
             }
             if (!foundFlag) {
-                std::cout << "No account with that account number!" << std::endl;
+                std::cout << "No account with that account number!" << '\n';
                 sleep;
             }
             file.close();
@@ -231,14 +231,14 @@ int main() {
                     if (a.compareHash()) {
                         break;
                     } else {
-                        std::cout << "Incorrect password!" << std::endl;
+                        std::cout << "Incorrect password!" << '\n';
                         sleep;
                         break;
                     }
                 }
             }
             if (!foundFlag) {
-                std::cout << "No account with that account number!" << std::endl;
+                std::cout << "No account with that account number!" << '\n';
                 sleep;
             } else {
                 std::cout << "Enter recipient's account number: ";
@@ -253,15 +253,15 @@ int main() {
                     getAmount:
                         std::cin >> amount;
                         if (amount >= a.balance) {
-                            std::cout << "Insufficient credits!" << std::endl;
-                            std::cout << "Enter amount again: " << std::endl;
+                            std::cout << "Insufficient credits!" << '\n';
+                            std::cout << "Enter amount again: " << '\n';
                             goto getAmount;
                         } else {
                             a1.balance += amount;
                             a.balance -= amount;
                             std::cout << "Rs." << amount
                                       << " transferred successfully to "
-                                      << temp1 << std::endl;
+                                      << temp1 << '\n';
                             file.seekp(pos);
                             file.write((char *)&a, sizeof(a));
                             file.seekp(pos1);
@@ -272,7 +272,7 @@ int main() {
                     }
                 }
                 if (!foundFlag1) {
-                    std::cout << "No account with that account number!" << std::endl;
+                    std::cout << "No account with that account number!" << '\n';
                     sleep;
                 }
             }
@@ -296,7 +296,7 @@ int main() {
                         while (file.read((char *)&a, sizeof(a))) {
                             if (temp1 == a.getAccountNumber()) {
                                 std::cout << "Account successfully deleted!"
-                                          << std::endl;
+                                          << '\n';
                                 sleep;
                             } else {
                                 file1.write((char *)&a, sizeof(a));
@@ -305,14 +305,14 @@ int main() {
                         }
                         break;
                     } else {
-                        std::cout << "Incorrect password!" << std::endl;
+                        std::cout << "Incorrect password!" << '\n';
                         sleep;
                         break;
                     }
                 }
             }
             if (!foundFlag) {
-                std::cout << "No account with that account number!" << std::endl;
+                std::cout << "No account with that account number!" << '\n';
                 sleep;
             }
             if (deletionConfirmation) {
@@ -326,7 +326,7 @@ int main() {
             break;
 
         default:
-            std::cout << "Invalid choice!" << std::endl;
+            std::cout << "Invalid choice!" << '\n';
             sleep;
         }
         foundFlag = false;  // Resets the state of all boolean check flags to
