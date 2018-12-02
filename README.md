@@ -1,6 +1,7 @@
 # Banking Console
 A simple banking console simulator developed for a school project.
 ![Console Screenshot](https://github.com/srijan-nayak/Banking-Console/blob/master/screenshots/Screenshot%202018-11-11%20at%205.04.42%20PM.png?raw=true)
+###### For macOS and Linux only.
 
 ## Features
 * Open account
