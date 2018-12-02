@@ -329,6 +329,7 @@ int main() {
             std::cout << "Invalid choice!" << '\n';
             sleep;
         }
+        std::cin.clear();
         std::cin.ignore(INT_MAX, '\n');
         foundFlag = false;  // Resets the state of all boolean check flags to
         foundFlag1 = false; // false.
