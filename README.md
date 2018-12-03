@@ -43,3 +43,6 @@ std::string masterKeyHash = // Hash of master key for exiting the console.
     "491203c64506797dc07ce337d86f0355b0660df01f12c6b5de0304aebbc01fbd";
 ```
 You can generate your own sha256 hash from [here](https://passwordsgenerator.net/sha256-hash-generator/).
+
+
+For more information, go through the "Banking Console Documentation.pdf".
