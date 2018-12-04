@@ -35,7 +35,7 @@ After the application shows the main menu, enter 'c' to generate or reset the ac
 **NOTE:** The above step **must be** followed on the first run of the application before doing anything else.
 
 ## How to Exit
-The console can be force-quitted by closing the terminal, but for simulation purposes, the application be terminated by entering 0 in the main menu, and then entering '30092015' as the password.
+The console can be force-quitted by closing the terminal, but for simulation purposes, the application can be terminated by entering 0 in the main menu, and then entering '30092015' as the password.
 
 To change the master key, simply replace the masterKeyHash in src/main.cpp with your own sha256 hash.
 ```c++
