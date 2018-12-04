@@ -4,4 +4,4 @@ a.out
 Account.hpp.gch
 sha256.hpp.gch
 .DS_Store
-/data
+*.dat
