@@ -48,4 +48,4 @@ For more information, go through the [documentation pdf][documentation].
 
 [screenshot]: https://github.com/srijan-nayak/Banking-Console/blob/master/screenshots/Screenshot%202018-11-11%20at%205.04.42%20PM.png?raw=true
 [hashGenerator]: https://passwordsgenerator.net/sha256-hash-generator/
-[documentation]: https://github.com/srijan-nayak/Banking-Console/blob/master/Banking%20Console%20Documentation.pdf
+[documentation]: https://github.com/srijan-nayak/Banking-Console/raw/master/Banking%20Console%20Documentation.pdf
