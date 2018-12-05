@@ -58,6 +58,7 @@ int main() {
     bool foundFlag = false;
     bool foundFlag1 = false;
     bool deletionConfirmation = false;
+    bool getFlag = false;
     const int ACCOUNT_CODE = 1000;
 
     clearScreen;
@@ -94,6 +95,7 @@ int main() {
             file.open("data/records.dat",
                       std::ios::binary | std::ios::out | std::ios::app);
             a.inputAccountDetails();
+            getFlag = true;
             file.write((char *)&a, sizeof(a));
             file.close();
             break;
@@ -201,6 +203,7 @@ int main() {
                     if (a.compareHash()) {
                         clearScreen;
                         a.displayAccountDetails();
+                        getFlag = true;
                         break;
                     } else {
                         std::cout << "Incorrect password!" << '\n';
@@ -329,7 +332,13 @@ int main() {
             std::cout << "Invalid choice!" << '\n';
             sleep;
         }
+        if (!getFlag) {
+            std::cin.clear();
+            std::cin.ignore(INT_MAX, '\n');
+        }
         foundFlag = false;  // Resets the state of all boolean check flags to
         foundFlag1 = false; // false.
+        getFlag = false;
+        deletionConfirmation = false;
     }
 }
