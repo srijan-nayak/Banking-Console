@@ -1,6 +1,6 @@
 # Banking Console
 A simple banking console simulator developed for a school project.
-![Console Screenshot](https://github.com/srijan-nayak/Banking-Console/blob/master/screenshots/Screenshot%202018-11-11%20at%205.04.42%20PM.png?raw=true)
+![Console Screenshot][screenshot]
 ###### For macOS and Linux only.
 
 ## Features
@@ -42,7 +42,10 @@ To change the master key, simply replace the masterKeyHash in src/main.cpp with 
 std::string masterKeyHash = // Hash of master key for exiting the console.
     "491203c64506797dc07ce337d86f0355b0660df01f12c6b5de0304aebbc01fbd";
 ```
-You can generate your own sha256 hash from [here](https://passwordsgenerator.net/sha256-hash-generator/).
+You can generate your own sha256 hash from [here][hashGenerator].
 
+For more information, go through the [documentation pdf][documentation].
 
-For more information, go through the "Banking Console Documentation.pdf".
+[screenshot]: https://github.com/srijan-nayak/Banking-Console/blob/master/screenshots/Screenshot%202018-11-11%20at%205.04.42%20PM.png?raw=true
+[hashGenerator]: https://passwordsgenerator.net/sha256-hash-generator/
+[documentation]: https://github.com/srijan-nayak/Banking-Console/blob/master/Banking%20Console%20Documentation.pdf
