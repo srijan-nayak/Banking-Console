@@ -13,8 +13,8 @@
 #include <chrono>
 #include <fstream>
 #include <iostream>
-#include <thread>
 #include <termios.h>
+#include <thread>
 #include <unistd.h>
 
 using namespace std::this_thread;
@@ -42,10 +42,10 @@ class Account {
     void convertDate();
     void generateHash();
     void generateAccountNumber();
-    bool notValidName() const;
-    bool notValidDateOfBirth() const;
-    bool notValidPhoneNumber() const;
-    bool notValidEmail() const;
+    const bool notValidName() const;
+    const bool notValidDateOfBirth() const;
+    const bool notValidPhoneNumber() const;
+    const bool notValidEmail() const;
 
   public:
     double balance;

@@ -248,7 +248,7 @@ getAmount:
  * Returns true if name is not
  * valid.
  */
-bool Account::notValidName() const {
+const bool Account::notValidName() const {
     bool notValid = false;
     for (char ch : name) {
         if (!(isalpha(ch) || isspace(ch))) {
@@ -263,7 +263,7 @@ bool Account::notValidName() const {
  * Returns true if date of birth is not
  * valid.
  */
-bool Account::notValidDateOfBirth() const {
+const bool Account::notValidDateOfBirth() const {
     return (strlen(dateOfBirth) != 10) || (dateOfBirth[2] != '/') ||
            (dateOfBirth[5] != '/') || (!isdigit(dateOfBirth[0])) ||
            (!isdigit(dateOfBirth[1])) || (!isdigit(dateOfBirth[3])) ||
@@ -277,7 +277,7 @@ bool Account::notValidDateOfBirth() const {
  * Returns true if phone number is not
  * valid.
  */
-bool Account::notValidPhoneNumber() const {
+const bool Account::notValidPhoneNumber() const {
     bool notValid = false;
     for (char ch : phoneNumber) {
         if (!isdigit(ch)) {
@@ -295,7 +295,7 @@ bool Account::notValidPhoneNumber() const {
  * Returns true if email address is not
  * valid.
  */
-bool Account::notValidEmail() const {
+const bool Account::notValidEmail() const {
     bool noAtTheRate = true;
     bool noDot = true;
     bool notValid = true;
