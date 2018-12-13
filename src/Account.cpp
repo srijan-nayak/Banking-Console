@@ -139,7 +139,7 @@ void Account::generateAccountNumber() {
 
 /**
  * Takes in a password input from the user
- * and then generate a hash with the sha256
+ * and then generates a hash with the sha256
  * hash function and compares with the hash
  * stored in the current object.
  */
