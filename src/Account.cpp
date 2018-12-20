@@ -77,7 +77,7 @@ const char *Account::getDateOfBirth() const { return dateOfBirth; }
 
 /**
  * Takes in a password input from the user
- * and then generate a hash with the sha256
+ * and then generates a hash with the sha256
  * hash function.
  */
 void Account::generateHash() {
