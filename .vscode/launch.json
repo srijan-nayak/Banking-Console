@@ -5,7 +5,7 @@
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/build/bankingConsole",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -18,7 +18,7 @@
             "name": "(lldb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/build/bankingConsole",
             "processId": "${command:pickProcess}",
             "MIMode": "lldb"
         }
