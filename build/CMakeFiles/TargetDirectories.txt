@@ -1,3 +1,0 @@
-/Users/srijannayak/dev/C++/Banking Console/build/CMakeFiles/rebuild_cache.dir
-/Users/srijannayak/dev/C++/Banking Console/build/CMakeFiles/edit_cache.dir
-/Users/srijannayak/dev/C++/Banking Console/build/CMakeFiles/bankingConsole.dir
