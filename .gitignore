@@ -5,3 +5,5 @@ Account.hpp.gch
 sha256.hpp.gch
 .DS_Store
 records.dat
+/CMakeFiles
+bankingConsole
