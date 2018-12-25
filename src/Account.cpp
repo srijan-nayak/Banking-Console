@@ -105,10 +105,8 @@ void Account::convertDate() {
             if (isdigit(dateOfBirth[i])) {
                 dateOfBirthString[j] = dateOfBirth[i];
                 j++;
-                break;
-            } else {
-                break;
             }
+            break;
         }
         i++;
         dateOfBirthString[8] = char(0);
@@ -125,14 +123,14 @@ void Account::convertDate() {
 void Account::generateAccountNumber() {
     int ACCOUNT_CODE;
     std::fstream file;
-    file.open("data/accCode.dat", std::ios::binary | std::ios::in);
+    file.open("../data/accCode.dat", std::ios::binary | std::ios::in);
     file.read((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
     file.close();
     accountNumber = "34";
     accountNumber += std::string(dateOfBirthString);
     accountNumber += std::to_string(ACCOUNT_CODE);
     ACCOUNT_CODE++;
-    file.open("data/accCode.dat", std::ios::binary | std::ios::out);
+    file.open("../data/accCode.dat", std::ios::binary | std::ios::out);
     file.write((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
     file.close();
 }

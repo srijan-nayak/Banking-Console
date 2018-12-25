@@ -70,7 +70,7 @@ int main() {
 
         switch (choice) {
         case 'c': // Case for hidden menu option 'Reset Account Code Counter'.
-            file.open("data/accCode.dat", std::ios::binary | std::ios::out);
+            file.open("../data/accCode.dat", std::ios::binary | std::ios::out);
             file.write((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
             file.close();
             break;
