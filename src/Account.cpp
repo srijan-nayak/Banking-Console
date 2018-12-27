@@ -253,6 +253,9 @@ const bool Account::notValidName() const {
             notValid = true;
         }
     }
+    if (name.empty()) {
+        notValid = true;
+    }
     return notValid;
 }
 
