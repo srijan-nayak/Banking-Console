@@ -13,7 +13,7 @@
  * without the input being shown on the screen.
  */
 void setStdinEcho(bool enable = true) {
-    struct termios tty;
+    struct termios tty {};
     tcgetattr(STDIN_FILENO, &tty);
     if (!enable)
         tty.c_lflag &= ~ECHO;
@@ -177,7 +177,7 @@ getName:
     std::cout << "Enter date of birth in dd/mm/yyyy format: ";
 getDate:
     std::cin.getline(dateOfBirth, 11);
-    if (notValidDateOfBirth()) {
+    if (notValidDate()) {
         std::cout << "Please enter date in dd/mm/yyyy format: ";
         goto getDate;
     }
@@ -264,7 +264,7 @@ const bool Account::notValidName() const {
  * Returns true if date of birth is not
  * valid.
  */
-const bool Account::notValidDateOfBirth() const {
+const bool Account::notValidDate() const {
     return (strlen(dateOfBirth) != 10) || (dateOfBirth[2] != '/') ||
            (dateOfBirth[5] != '/') || (!isdigit(dateOfBirth[0])) ||
            (!isdigit(dateOfBirth[1])) || (!isdigit(dateOfBirth[3])) ||
@@ -429,4 +429,6 @@ getPassword:
         std::cout << "Please re-enter password: ";
         goto getPassword;
     }
+    std::cout << "Password changed successfully." << '\n';
+    sleep;
 }

@@ -43,7 +43,7 @@ class Account {
     void generateHash();
     void generateAccountNumber();
     const bool notValidName() const;
-    const bool notValidDateOfBirth() const;
+    const bool notValidDate() const;
     const bool notValidPhoneNumber() const;
     const bool notValidEmail() const;
 
