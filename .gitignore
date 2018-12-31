@@ -4,4 +4,3 @@ sha256.hpp.gch
 records.dat
 debug/
 release/
-CMakeLists.txt
