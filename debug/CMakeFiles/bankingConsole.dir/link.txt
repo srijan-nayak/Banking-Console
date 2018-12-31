@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -std=c++14 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/bankingConsole.dir/src/Account.cpp.o CMakeFiles/bankingConsole.dir/src/main.cpp.o CMakeFiles/bankingConsole.dir/src/sha256.cpp.o  -o bankingConsole 
