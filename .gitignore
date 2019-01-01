@@ -1,7 +1,5 @@
-a.out
-Account.hpp.gch
-sha256.hpp.gch
-records.dat
-debug/
-release/
-.DS_Store
+data/records.dat
+debug
+release
+include/Account.hpp.gch
+include/sha256.hpp.gch

@@ -52,6 +52,30 @@ void combineString(std::string &longString, std::string stringPart[]) {
 }
 
 /**
+ * Converts a date string of the format
+ * "dd/mm/yyyy" to a string of the format
+ * "ddmmyyyy" which can be used to generate
+ * the account number.
+ */
+char *convertDate(char *date) {
+    char *dateString = new char[9];
+    int i = 0;
+    int j = 0;
+    while (i < 11) {
+        while (j < 9) {
+            if (isdigit(date[i])) {
+                dateString[j] = date[i];
+                j++;
+            }
+            break;
+        }
+        i++;
+        dateString[8] = char(0);
+    }
+    return dateString;
+}
+
+/**
  * Returns the account number stored in
  * the current object.
  */
@@ -89,30 +113,6 @@ void Account::generateHash() {
     std::cout << '\n';
     passwordHash = sha256(pass);
     splitString(passwordHash, hashPart);
-}
-
-/**
- * Converts a date string of the format
- * "dd/mm/yyyy" to a string of the format
- * "ddmmyyyy" which can be used to generate
- * the account number.
- */
-char *convertDate(char *date) {
-    char *dateString = new char[9];
-    int i = 0;
-    int j = 0;
-    while (i < 11) {
-        while (j < 9) {
-            if (isdigit(date[i])) {
-                dateString[j] = date[i];
-                j++;
-            }
-            break;
-        }
-        i++;
-        dateString[8] = char(0);
-    }
-    return dateString;
 }
 
 /**
