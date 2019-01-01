@@ -4,3 +4,4 @@ sha256.hpp.gch
 records.dat
 debug/
 release/
+.DS_Store
