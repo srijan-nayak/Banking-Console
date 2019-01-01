@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "release build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-Wall",
+                "-std=c++14",
+                "src/main.cpp",
+                "src/Account.hpp",
+                "src/Account.cpp",
+                "src/sha256.hpp",
+                "src/sha256.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        
+        {
+            "label": "debug build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-g",
+                "-std=c++14",
+                "src/main.cpp",
+                "src/Account.hpp",
+                "src/Account.cpp",
+                "src/sha256.hpp",
+                "src/sha256.cpp"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

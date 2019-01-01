@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.cpp": "cpp",
         "iostream": "cpp",
         "string": "cpp",
         "__config": "cpp",
@@ -11,7 +12,15 @@
         "stdexcept": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "thread": "cpp",
+        "fstream": "cpp",
+        "chrono": "cpp",
+        "__locale": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "streambuf": "cpp",
+        "ios": "cpp"
     },
     "cSpell.words": [
         "ddmmyyyy"

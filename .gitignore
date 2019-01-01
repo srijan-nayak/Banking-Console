@@ -1,5 +1,4 @@
 data/records.dat
-debug
-release
-include/Account.hpp.gch
-include/sha256.hpp.gch
+src/Account.hpp.gch
+src/sha256.hpp.gch
+a.out

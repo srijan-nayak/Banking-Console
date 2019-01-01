@@ -125,14 +125,14 @@ void Account::generateAccountNumber() {
     int ACCOUNT_CODE;
     char *dateString = convertDate(dateOfBirth);
     std::fstream file;
-    file.open("../data/accCode.dat", std::ios::binary | std::ios::in);
+    file.open("data/accCode.dat", std::ios::binary | std::ios::in);
     file.read((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
     file.close();
     accountNumber = "34";
     accountNumber += std::string(dateString);
     accountNumber += std::to_string(ACCOUNT_CODE);
     ACCOUNT_CODE++;
-    file.open("../data/accCode.dat", std::ios::binary | std::ios::out);
+    file.open("data/accCode.dat", std::ios::binary | std::ios::out);
     file.write((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
     file.close();
     delete dateString;

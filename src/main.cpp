@@ -70,7 +70,7 @@ int main() {
 
         switch (choice) {
         case 'c': // Case for hidden menu option 'Reset Account Code Counter'.
-            file.open("../data/accCode.dat", std::ios::binary | std::ios::out);
+            file.open("data/accCode.dat", std::ios::binary | std::ios::out);
             file.write((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
             file.close();
             break;
@@ -91,7 +91,7 @@ int main() {
             break;
 
         case '1': // Case for menu option 'Open Account'.
-            file.open("../data/records.dat",
+            file.open("data/records.dat",
                       std::ios::binary | std::ios::out | std::ios::app);
             a.inputAccountDetails();
             file.write((char *)&a, sizeof(a));
@@ -99,7 +99,7 @@ int main() {
             break;
 
         case '2': // Case for menu option 'Deposit Amount'.
-            file.open("../data/records.dat",
+            file.open("data/records.dat",
                       std::ios::binary | std::ios::in | std::ios::out);
             std::cout << "Enter account number: ";
             std::cin.ignore();
@@ -123,7 +123,7 @@ int main() {
             break;
 
         case '3': // Case for menu option 'Withdraw Amount'.
-            file.open("../data/records.dat",
+            file.open("data/records.dat",
                       std::ios::binary | std::ios::in | std::ios::out);
             std::cout << "Enter account number: ";
             std::cin.ignore();
@@ -147,7 +147,7 @@ int main() {
             break;
 
         case '4': // Case for menu option "Forgot Password".
-            file.open("../data/records.dat",
+            file.open("data/records.dat",
                       std::ios::binary | std::ios::in | std::ios::out);
             std::cout << "Enter account number: ";
             std::cin.ignore();
@@ -190,7 +190,7 @@ int main() {
             break;
 
         case '5': // Case for menu option 'Display All Account Information'.
-            file.open("../data/records.dat", std::ios::binary | std::ios::in);
+            file.open("data/records.dat", std::ios::binary | std::ios::in);
             std::cout << "Enter account number: ";
             std::cin.ignore();
             std::getline(std::cin, temp1);
@@ -217,7 +217,7 @@ int main() {
             break;
 
         case '6': // Case for menu option 'Transfer Account'.
-            file.open("../data/records.dat",
+            file.open("data/records.dat",
                       std::ios::binary | std::ios::in | std::ios::out);
             std::cout << "Enter your account number: ";
             std::cin.ignore();
@@ -280,7 +280,7 @@ int main() {
             break;
 
         case '7': // Case for menu option 'Delete Account'.
-            file.open("../data/records.dat", std::ios::binary | std::ios::in);
+            file.open("data/records.dat", std::ios::binary | std::ios::in);
             file1.open("data/temp.dat", std::ios::binary | std::ios::out);
             std::cout << "Enter account number: ";
             std::cin.ignore();
@@ -316,8 +316,8 @@ int main() {
                 sleep;
             }
             if (deletionConfirmation) {
-                remove("../data/records.dat");
-                rename("data/temp.dat", "../data/records.dat");
+                remove("data/records.dat");
+                rename("data/temp.dat", "data/records.dat");
             } else {
                 remove("data/temp.dat");
             }

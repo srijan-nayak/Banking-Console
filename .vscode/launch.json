@@ -5,13 +5,22 @@
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/debug/bankingConsole",
+            "program": "${workspaceFolder}/a.out",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/debug/",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
             "MIMode": "lldb",
+            "preLaunchTask": "debug build"
         },
+        { 
+            "name": "(lldb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/a.out",
+            "processId": "${command:pickProcess}",
+            "MIMode": "lldb"
+        }
     ]
 }

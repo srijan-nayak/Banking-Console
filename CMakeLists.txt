@@ -1,7 +1,0 @@
-cmake_minimum_required (VERSION 3.13.2)
-project (banking_console)
-include_directories (include)
-file (GLOB SOURCES "src/*.cpp")
-add_executable (bankingConsole ${SOURCES})
-string (APPEND CMAKE_CXX_FLAGS_DEBUG " -std=c++14")
-string (APPEND CMAKE_CXX_FLAGS_RELEASE " -std=c++14")
