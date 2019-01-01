@@ -8,7 +8,7 @@
             "program": "${workspaceFolder}/debug/bankingConsole",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/debug/",
             "environment": [],
             "externalConsole": true,
             "MIMode": "lldb",

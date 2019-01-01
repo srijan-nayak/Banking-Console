@@ -26,6 +26,7 @@ using namespace std::chrono;
 void setStdinEcho(bool);
 void splitString(const std::string &longString, std::string *stringPart);
 void combineString(std::string &longString, std::string *stringPart);
+char *convertDate(char *date);
 
 class Account {
   private:
@@ -37,9 +38,7 @@ class Account {
     std::string hashPart[8];
     std::string accountType;
     char dateOfBirth[11];
-    char dateOfBirthString[9];
 
-    void convertDate();
     void generateHash();
     void generateAccountNumber();
     const bool notValidName() const;

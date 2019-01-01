@@ -97,21 +97,22 @@ void Account::generateHash() {
  * "ddmmyyyy" which can be used to generate
  * the account number.
  */
-void Account::convertDate() {
+char *convertDate(char *date) {
+    char *dateString = new char[9];
     int i = 0;
     int j = 0;
     while (i < 11) {
         while (j < 9) {
-            if (isdigit(dateOfBirth[i])) {
-                dateOfBirthString[j] = dateOfBirth[i];
+            if (isdigit(date[i])) {
+                dateString[j] = date[i];
                 j++;
             }
             break;
         }
         i++;
-        dateOfBirthString[8] = char(0);
+        dateString[8] = char(0);
     }
-    generateAccountNumber();
+    return dateString;
 }
 
 /**
@@ -122,17 +123,19 @@ void Account::convertDate() {
  */
 void Account::generateAccountNumber() {
     int ACCOUNT_CODE;
+    char *dateString = convertDate(dateOfBirth);
     std::fstream file;
     file.open("../data/accCode.dat", std::ios::binary | std::ios::in);
     file.read((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
     file.close();
     accountNumber = "34";
-    accountNumber += std::string(dateOfBirthString);
+    accountNumber += std::string(dateString);
     accountNumber += std::to_string(ACCOUNT_CODE);
     ACCOUNT_CODE++;
     file.open("../data/accCode.dat", std::ios::binary | std::ios::out);
     file.write((char *)&ACCOUNT_CODE, sizeof(ACCOUNT_CODE));
     file.close();
+    delete dateString;
 }
 
 /**
@@ -181,7 +184,8 @@ getDate:
         std::cout << "Please enter date in dd/mm/yyyy format: ";
         goto getDate;
     }
-    convertDate();
+    convertDate(dateOfBirth);
+    generateAccountNumber();
 
     std::cout << "Enter phone number without any prefix: ";
 getPhoneNumber:
