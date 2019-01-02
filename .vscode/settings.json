@@ -1,8 +1,7 @@
 {
     "files.associations": {
         "*.cpp": "cpp",
-        "iostream": "cpp",
-        "string": "cpp",
+        "*.tpp": "cpp",
         "__config": "cpp",
         "__nullptr": "cpp",
         "cstddef": "cpp",
@@ -12,17 +11,10 @@
         "stdexcept": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "algorithm": "cpp",
-        "thread": "cpp",
-        "fstream": "cpp",
-        "chrono": "cpp",
-        "__locale": "cpp",
-        "istream": "cpp",
-        "ostream": "cpp",
-        "streambuf": "cpp",
-        "ios": "cpp"
+        "algorithm": "cpp"
     },
     "cSpell.words": [
         "ddmmyyyy"
-    ]
+    ],
+    "terminal.integrated.shell.windows": "cmd.exe"
 }

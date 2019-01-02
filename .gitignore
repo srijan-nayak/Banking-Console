@@ -1,4 +1,4 @@
 data/records.dat
 src/Account.hpp.gch
 src/sha256.hpp.gch
-a.out
+bin
