@@ -1,5 +1,5 @@
 CXX		  := clang++
-CXX_FLAGS := -Wall -Wextra -std=c++17 -g
+CXX_FLAGS := -Wall -std=c++14 -g
 
 BIN		:= bin
 SRC		:= src
@@ -7,7 +7,7 @@ INCLUDE	:= include
 LIB		:= lib
 
 LIBRARIES	:=
-EXECUTABLE	:= main
+EXECUTABLE	:= bankingConsole
 
 
 all: $(BIN)/$(EXECUTABLE)
